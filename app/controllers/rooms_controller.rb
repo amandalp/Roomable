@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :set_Room, only: [:show, :edit, :update, :destroy]
+  before_action :set_room, only: [:show, :edit, :update, :destroy]
 
   # GET /rooms
   # GET /rooms.json
@@ -19,7 +19,7 @@ class RoomsController < ApplicationController
 
   # GET /rooms/1/edit
   def edit
-    @room.avatar = nil
+    @room.preview = nil
     @room.save
   end
 
