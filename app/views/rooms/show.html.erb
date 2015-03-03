@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @room.title %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @room.instructions %>
+  <%= image_tag @room.preview.url %>
+	<%= image_tag @room.preview.url(:medium) %>
+	<%= image_tag @room.preview.url(:thumb) %>
+</p>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>
