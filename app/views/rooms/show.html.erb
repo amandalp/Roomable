@@ -1,17 +1,20 @@
 <p id="notice"><%= notice %></p>
-
+<%= image_tag @room.preview.url(:medium) %>
 <p>
-  <strong>Title:</strong>
-  <%= @room.title %>
+	<strong><%= @room.title %></strong><br>
+	<%= @room.neighborhood %> | 
+	$<%= @room.price %>
+</p>
+<p>
+	<%= @room.description %>
+</p>
+<p>
+	Current Roommates: <%= @room.roommates %>
 </p>
 
-<p>
-  <strong>Instructions:</strong>
-  <%= @room.instructions %>
-  <%= image_tag @room.preview.url %>
-	<%= image_tag @room.preview.url(:medium) %>
-	<%= image_tag @room.preview.url(:thumb) %>
-</p>
+  
+<!--   <%= image_tag @room.preview.url %> -->	
+<!-- 	<%= image_tag @room.preview.url(:thumb) %> -->
 
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>

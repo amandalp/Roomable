@@ -11,17 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150303110819) do
+ActiveRecord::Schema.define(version: 20150303125027) do
 
   create_table "rooms", force: :cascade do |t|
     t.string   "title"
-    t.string   "instructions"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.string   "preview_file_name"
     t.string   "preview_content_type"
     t.integer  "preview_file_size"
     t.datetime "preview_updated_at"
+    t.integer  "price"
+    t.string   "neighborhood"
+    t.string   "roommates"
+    t.string   "description"
   end
 
   create_table "users", force: :cascade do |t|

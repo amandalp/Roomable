@@ -12,17 +12,30 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :preview %><br>
+    <%= f.file_field :preview %>
+  </div>
+  <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :instructions %><br>
-    <%= f.text_field :instructions %>
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
   </div>
   <div class="field">
-    <%= f.label :preview %><br>
-    <%= f.file_field :preview %>
+    <%= f.label :neighborhood %><br>
+    <%= f.text_field :neighborhood %>
   </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :roommates %><br>
+    <%= f.text_field :roommates %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
