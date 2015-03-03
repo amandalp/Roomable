@@ -28,6 +28,10 @@ gem "paperclip", "~> 4.2"
 gem 'devise'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+# Facebook gem
+gem 'omniauth-facebook'
+# Figaro
+gem "figaro"
 
 # Use Unicorn as the app server
 # gem 'unicorn'
