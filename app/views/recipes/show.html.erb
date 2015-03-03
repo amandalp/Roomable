@@ -8,6 +8,9 @@
 <p>
   <strong>Instructions:</strong>
   <%= @recipe.instructions %>
+  <%= image_tag @recipe.preview.url %>
+	<%= image_tag @recipe.preview.url(:medium) %>
+	<%= image_tag @recipe.preview.url(:thumb) %>
 </p>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |
