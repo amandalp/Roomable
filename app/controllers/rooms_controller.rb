@@ -10,6 +10,7 @@ class RoomsController < ApplicationController
   # GET /rooms/1
   # GET /rooms/1.json
   def show
+    @room = Room.find(params[:id])
   end
 
   # GET /rooms/new
@@ -26,7 +27,7 @@ class RoomsController < ApplicationController
   # POST /rooms
   # POST /rooms.json
   def create
-    @room = Room.new( room_params )
+    @room = Room.new(room_params)
 
     respond_to do |format|
       if @room.save
@@ -56,6 +57,7 @@ class RoomsController < ApplicationController
   # DELETE /rooms/1
   # DELETE /rooms/1.json
   def destroy
+    @room = Room.find(params[:id])
     @room.destroy
     respond_to do |format|
       format.html { redirect_to rooms_url, notice: 'Room was successfully destroyed.' }

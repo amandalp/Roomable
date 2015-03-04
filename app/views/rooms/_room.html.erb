@@ -1,49 +1,47 @@
 <p id="notice"><%= notice %></p>
-<!--main-->
+
   <div class="container" id="main">
     <div class="row">
       <div class="col-md-4 col-sm-6">
-        
-        
-
-  </div>
+      </div>
     <div class="col-md-4 col-sm-6">
-         
-          <div class="well"> 
-             <form class="form">
-              <h4>Sign-up</h4>
-              <div class="input-group text-center">
-              <input type="text" class="form-control input-lg" placeholder="Enter your email address">
-                <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="button">OK</button></span>
-              </div>
-            </form>
+      <div class="well"> 
+        <form class="form">
+          <h4>
+            Sign-up
+          </h4>
+          <div class="input-group text-center">
+            <input type="text" class="form-control input-lg" placeholder="Enter your email address">
+              <span class="input-group-btn">
+                <button class="btn btn-lg btn-primary" type="button">OK</button>
+              </span>
           </div>
-          <% @rooms.each do |room| %>
-         <div class="panel panel-default">
-           <div class="panel-heading"><h4><%= room.title %></h4></div>
-        <div class="panel-body">
+        </form>
+      </div>
+
+      <% @rooms.each do |room| %>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4><%= room.title %></h4>
+          </div>
+          <div class="panel-body">
             <p>
-              <%= image_tag room.preview.url(:medium), :class => 'room-preview-img' %>
+              <%= link_to (image_tag(room.preview.url(:medium), :class => 'room-preview-img')), room_path(room) %>
             </p>
-              <div class="clearfix"></div>
-              <hr>
-              <p><%= room.description %></p>
-            </div>
-         </div>
-         <% end %>
-      
-         <div class="panel panel-default">
-           <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Portlet Heading</h4></div>
-        <div class="panel-body">
-              <ul class="list-group">
-              <li class="list-group-item">Modals</li>
-              <li class="list-group-item">Sliders / Carousel</li>
-              <li class="list-group-item">Thumbnails</li>
-              </ul>
-            </div>
-       </div>
-      
-    </div>
-    
+            <p>
+              <%= room.neighborhood %> | $<%= room.price %><br>
+            </p>
+            <hr>
+            <p class="pull-right">
+              <img src="http://api.randomuser.me/portraits/med/men/20.jpg" width="28px" height="28px">
+              <img src="http://api.randomuser.me/portraits/med/men/21.jpg" width="28px" height="28px">
+            </p>
+            <%= link_to 'Show', room_path(room) %>
+          </div>
+        </div>
+      <% end %>  
+    </div> 
   </div>
-</div><!--/main-->
+</div>
+
+

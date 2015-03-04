@@ -71,7 +71,7 @@ input {
 	padding-bottom: 3;
 	background-color: black;
 	background: transparent;
-	color: white;
+	color: #000;
 }
 
 .navbar-brand {
@@ -94,4 +94,8 @@ input {
 
 .room-preview-img {
 	width: 100%;
+}
+
+p {
+	font-family: Raleway;
 }
