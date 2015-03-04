@@ -1,0 +1,85 @@
+.carousel-inner>.item>a>img {
+	min-width: 1450px;
+}
+
+.carousel {
+	position: absolute;
+	top: 0;
+}
+
+.navbar {
+	margin-bottom: 0px;
+	position: absolute;
+	top: 0px;
+	z-index: 10;
+/*	background: rgba(0,0,0,0.1);*/
+	width:100%;  
+/*	border-radius: 0px;*/
+	color: black;
+}
+
+h3 {
+	text-align: center;
+	font-weight: 100;
+	font-family: Raleway;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.btn {
+    position: absolute:
+    top: 50%;
+}
+
+.carousel .item {
+    /*height: 500px; OLD*/
+    /*background-color: #777; OLD*/
+
+    width:100%;
+    height:auto;
+}
+
+.welcome-text1 {
+	font-family: Raleway;
+	font-size: 90px;
+	margin-bottom: 20px;
+}
+
+.welcome-text {
+	font-family: Raleway;
+	font-size: 80px;
+	margin-bottom: 260px;
+}
+
+.welcome-subtext {
+	font-family: Raleway;
+	font-size: 25px;
+	margin-bottom: 240px;
+}
+
+h2 {
+	font-family: raleway;
+	font-size: 50px;
+	font-weight: 100;
+}
+
+input {
+	margin: 13 0 0 10;
+	padding-top: 3;
+	padding-bottom: 3;
+	background-color: black;
+	background: transparent;
+	color: white;
+}
+
+.navbar-brand {
+	padding-top: 20;
+	color: white;
+	font-size: 20px;
+}
+
+.carousel-caption {
+	bottom: 300;
+}

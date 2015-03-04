@@ -1,2 +1,47 @@
-<h1>Welcome!</h1>
+<div id="carousel-home" class="carousel slide" data-ride="carousel" data-interval="4000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-home" data-slide-to="1"></li>
+    <li data-target="#carousel-home" data-slide-to="2"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <a href="http://imgur.com/PHCLckF"><img src="http://i.imgur.com/PHCLckF.png?5" title="source: imgur.com" /></a>
+      <div class="carousel-caption">
+          <h1 class="welcome-text1">GET ROOMABLE</h1>
+          <h3 class="welcome-subtext">Find the right place + the right room + the right roommates</h3>
+
+      </div>
+    </div>
+    <div class="item">
+      <a href="http://imgur.com/pQwNmL9"><img src="http://i.imgur.com/pQwNmL9.jpg?3" title="source: imgur.com" /></a>
+      <div class="carousel-caption">
+          	<h1 class="welcome-text">Love where you live</h1>
+      </div>
+    </div>
+    <div class="item">
+      <a href="http://imgur.com/5jVgVFv"><img src="http://i.imgur.com/5jVgVFv.jpg" title="source: imgur.com" /></a>
+      <div class="carousel-caption">
+          <h1 class="welcome-text">Meet your new best friends</h1>
+      </div>
+    </div>
+    <div class="item">
+      <a href="http://imgur.com/mrDO65q"><img src="http://i.imgur.com/mrDO65q.png?1" title="source: imgur.com" /></a>
+      <div class="carousel-caption">
+          <h1 class="welcome-subtext"><a href="/auth/facebook">GET Roomable</a></h2>
+      </div>  
+    </div>
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-home" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-home" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> <!-- Carousel -->
 <%= link_to 'Rooms', controller: 'rooms' %>
