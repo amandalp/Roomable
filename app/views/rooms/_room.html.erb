@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+<!--main-->
+  <div class="container" id="main">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        
+        
+
+  </div>
+    <div class="col-md-4 col-sm-6">
+         
+          <div class="well"> 
+             <form class="form">
+              <h4>Sign-up</h4>
+              <div class="input-group text-center">
+              <input type="text" class="form-control input-lg" placeholder="Enter your email address">
+                <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="button">OK</button></span>
+              </div>
+            </form>
+          </div>
+          <% @rooms.each do |room| %>
+         <div class="panel panel-default">
+           <div class="panel-heading"><h4><%= room.title %></h4></div>
+        <div class="panel-body">
+            <p>
+              <%= image_tag room.preview.url(:medium), :class => 'room-preview-img' %>
+            </p>
+              <div class="clearfix"></div>
+              <hr>
+              <p><%= room.description %></p>
+            </div>
+         </div>
+         <% end %>
+      
+         <div class="panel panel-default">
+           <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Portlet Heading</h4></div>
+        <div class="panel-body">
+              <ul class="list-group">
+              <li class="list-group-item">Modals</li>
+              <li class="list-group-item">Sliders / Carousel</li>
+              <li class="list-group-item">Thumbnails</li>
+              </ul>
+            </div>
+       </div>
+      
+    </div>
+    
+  </div>
+</div><!--/main-->

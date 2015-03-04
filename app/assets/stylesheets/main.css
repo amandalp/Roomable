@@ -83,3 +83,15 @@ input {
 .carousel-caption {
 	bottom: 300;
 }
+
+.panel-thumbnail {
+	background-size: 400px;	
+}
+
+.panel {
+	padding-left: 200;
+}
+
+.room-preview-img {
+	width: 100%;
+}

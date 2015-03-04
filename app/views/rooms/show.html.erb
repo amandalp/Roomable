@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
+<!-- 
+<div class="panel panel-default">
+  <div class="panel-body">
+  	<p><strong><%= @room.title %></strong><br>
 <%= image_tag @room.preview.url(:medium) %>
 <p>
 	<strong><%= @room.title %></strong><br>
@@ -11,10 +15,36 @@
 <p>
 	Current Roommates: <%= @room.roommates %>
 </p>
-
+ -->
   
 <!--   <%= image_tag @room.preview.url %> -->	
 <!-- 	<%= image_tag @room.preview.url(:thumb) %> -->
+<div class="container">
+	<div class="row">
+	  <div class="col-sm-4 col-sm-offset-4">
+	    <div class="panel panel-default">
+	      <div class="panel-thumbnail">
+	      	<%= image_tag @room.preview.url(:medium), :class => 'room-preview-img' %>
+	      </div>
+	              <div class="panel-body">
+	                <p class="lead"><strong><%= @room.title %></strong></p>
+	                  <p><%= @room.neighborhood %> | $<%= @room.price %></p>
+	                  <p><%= @room.description %></p>
+	                  <hr>
+	                  <div class="current-roommates">
+	                  	<p><strong>Current Roommates: </strong><%= @room.roommates %></p>
+	      	            <p>
+	      	              <img src="http://api.randomuser.me/portraits/med/men/20.jpg" width="28px" height="28px">
+	      	              <img src="http://api.randomuser.me/portraits/med/men/21.jpg" width="28px" height="28px">
+	      	            </p>
+	      	          </div>
+	              </div>
+	    </div> 
+	  </div>
+	</div>
+</div>
 
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>
+
+
