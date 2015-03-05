@@ -8,21 +8,23 @@
       <div class="well"> 
         <form class="form">
           <h4>
-            Sign-up
+            Search
           </h4>
-          <div class="input-group text-center">
-            <input type="text" class="form-control input-lg" placeholder="Enter your email address">
-              <span class="input-group-btn">
-                <button class="btn btn-lg btn-primary" type="button">OK</button>
+          <div class="input text-center">
+            <input type="text" class="form-control input-sm" placeholder="Neighborhood"><br>
+            <input type="text" class="form-control input-sm" placeholder="Price"><br>            
+              <span class="input-btn">
+                <button class="btn btn-sm btn-white" type="button">Filter</button>
               </span>
           </div>
+          
         </form>
       </div>
 
       <% @rooms.each do |room| %>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4><%= room.title %></h4>
+            <h4><%= link_to (room.title), room_path(room) %></h4>
           </div>
           <div class="panel-body">
             <p>
@@ -32,11 +34,16 @@
               <%= room.neighborhood %> | $<%= room.price %><br>
             </p>
             <hr>
-            <p class="pull-right">
-              <img src="http://api.randomuser.me/portraits/med/men/20.jpg" width="28px" height="28px">
-              <img src="http://api.randomuser.me/portraits/med/men/21.jpg" width="28px" height="28px">
+            <p class="pull-left">
+              <a href="http://www.twitter.com/bmast39"><img src="http://api.randomuser.me/portraits/med/men/20.jpg" width="28px" height="28px"></a>
+              <a href="http://www.twitter.com/zoates"><img src="http://api.randomuser.me/portraits/med/men/21.jpg" width="28px" height="28px"></a>
             </p>
-            <%= link_to 'Show', room_path(room) %>
+            <br>
+            <hr>
+            <div class="text-center" 
+              <a href="http://imgur.com/iU49cKq"><img src="http://i.imgur.com/iU49cKq.png" title="source: imgur.com" /></a>
+              <a href="http://imgur.com/HPNU9c5"><img src="http://i.imgur.com/HPNU9c5.png" title="source: imgur.com" /></a>
+            </div>  
           </div>
         </div>
       <% end %>  

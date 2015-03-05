@@ -9,15 +9,20 @@
 	      </div>
 	      <div class="panel-body">
 	        <p class="lead"><strong><%= @room.title %></strong></p>
-	        <p><%= @room.neighborhood %> | $<%= @room.price %></p>
-	        <p><%= @room.description %></p>
+	        <p class="room-text"><%= @room.neighborhood %> | $<%= @room.price %></p>
+	        <p class="room-text"><%= @room.description %></p>
 	        <hr>
 	        <div class="current-roommates">
-	        	<p><strong>Current Roommates: </strong><%= @room.roommates %></p>
+	        	<p class="room-text"><strong>Current Roommates: </strong><%= @room.roommates %></p>
 	      	  <p>
-	      	    <img src="http://api.randomuser.me/portraits/med/men/20.jpg" width="28px" height="28px">
-	      	    <img src="http://api.randomuser.me/portraits/med/men/21.jpg" width="28px" height="28px">
+	      	    <a href="http://www.twitter.com/bmast39"><img src="http://api.randomuser.me/portraits/med/men/20.jpg" width="28px" height="28px"></a>
+	      	    <a href="http://www.twitter.com/zoates"><img src="http://api.randomuser.me/portraits/med/men/21.jpg" width="28px" height="28px"></a>
 	      	  </p>
+	      	  <hr>
+	      	  <div class="text-center" 
+	      	    <a href="http://imgur.com/iU49cKq"><img src="http://i.imgur.com/iU49cKq.png" title="source: imgur.com" /></a>
+	      	    <a href="http://imgur.com/HPNU9c5"><img src="http://i.imgur.com/HPNU9c5.png" title="source: imgur.com" /></a>
+	      	  </div>  
 	      	</div>
 	      </div>
 	    </div> 
@@ -25,10 +30,11 @@
 	</div>
 </div>
 
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Delete', room_path(@room),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'See all rooms', rooms_path %>
-
+<div class="room-text">
+	<%= link_to 'Edit', edit_room_path(@room) %> |
+	<%= link_to 'Delete', room_path(@room),
+	              method: :delete,
+	              data: { confirm: 'Are you sure?' } %> |
+	<%= link_to 'See all rooms', rooms_path %>
+</div>
 
