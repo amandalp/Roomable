@@ -1,28 +1,11 @@
-== README
+== Roomable
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Roomable is a web (and soon-to-be mobile app) that makes it easier to find the right room and the right roommates. Users can swipe through available rooms or potential roommates, as on Tinder, and can also access users’ social media links (a standard ask on any Craigslist housing post).
 
-Things you may want to cover:
+Technology:
 
-* Ruby version
+* Ruby
 
-* System dependencies
+* Rails
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* PostgreSQL
