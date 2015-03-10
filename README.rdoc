@@ -9,3 +9,5 @@ Technology:
 * Rails
 
 * PostgreSQL
+
+* Facebook OAuth
